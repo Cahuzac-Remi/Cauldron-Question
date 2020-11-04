@@ -15,14 +15,12 @@ class CommentController extends AbstractController
      */
     public function commentVote($id, $direction)
     {
-
-
         if($direction === 'up') {
             $currentVoteCount = rand(7, 100);
         } else {
             $currentVoteCount = rand(0, 5);
         }
-        return $this->Json(['votes' => $currentVoteCount]);
+        return $this->json(['votes' => $currentVoteCount]);
     }
 
 
